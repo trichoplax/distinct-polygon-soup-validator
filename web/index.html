@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+        <title>Distinct Polygon Soup validator</title>
+    </head>
+    <body>
+        <script type="module">
+            import init, {
+                validate_distinct_polygon_soup,
+            } from "./distinct_polygon_soup_validator.js";
+            const run = async () => {
+                await init();
+                document.getElementById("validate_button").onclick = () => {
+                    let candidate =
+                        document.getElementById("string_input").value;
+                    let outcome = validate_distinct_polygon_soup(candidate);
+                    let destination =
+                        document.getElementById("outcome_section");
+                    destination.innerHTML = outcome;
+                };
+            };
+            run();
+        </script>
+        <h1>Distinct Polygon Soup validator (under construction)</h1>
+        <h2>String to be validated</h2>
+        <textarea autofocus id="string_input" rows="2" cols="40"></textarea>
+        <br />
+        <button id="validate_button">Validate string</button>
+        <h2>Outcome</h2>
+        <div id="outcome_section">
+            Press "Validate string" to see the outcome
+        </div>
+        <hr />
+        <a
+            href="https://github.com/trichoplax/distinct-polygon-soup-validator"
+            target="_blank"
+            title="View the source code on GitHub"
+        >
+            Source code (opens in new tab)
+        </a>
+    </body>
+</html>
