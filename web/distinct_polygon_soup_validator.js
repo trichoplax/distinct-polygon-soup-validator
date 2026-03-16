@@ -1,12 +1,12 @@
 /**
- * @param {string} s
+ * @param {string} soup
  * @returns {string}
  */
-export function validate_distinct_polygon_soup(s) {
+export function validate_distinct_polygon_soup(soup) {
     let deferred2_0;
     let deferred2_1;
     try {
-        const ptr0 = passStringToWasm0(s, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const ptr0 = passStringToWasm0(soup, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
         const len0 = WASM_VECTOR_LEN;
         const ret = wasm.validate_distinct_polygon_soup(ptr0, len0);
         deferred2_0 = ret[0];
